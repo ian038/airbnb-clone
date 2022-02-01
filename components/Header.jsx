@@ -4,7 +4,6 @@ import { GlobeAltIcon, MenuIcon, UserCircleIcon, UsersIcon, SearchIcon } from '@
 import { DateRange, DateRangePicker } from 'react-date-range';
 import { useRouter } from "next/dist/client/router";
 import { useMediaQuery } from "@react-hook/media-query";
-
 import 'react-date-range/dist/styles.css'
 import 'react-date-range/dist/theme/default.css'
 
@@ -15,7 +14,7 @@ export default function Header({ placeholder }) {
     const [numberOfGuests, setNumberOfGuests] = useState(1);
     const router = useRouter()
 
-    const handleSelect = (ranges) => {
+    const handleSelect = ranges => {
         setStartDate(ranges.selection.startDate);
         setEndDate(ranges.selection.endDate);
     }
